@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +97,47 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-portfolio-dark-blue text-white;
+    scroll-behavior: smooth;
   }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Progress indicators styling */
+.progress-indicator {
+  @apply w-2 h-2 rounded-full bg-gray-400 transition-all duration-300;
+}
+
+.progress-indicator.active {
+  @apply w-3 h-3 bg-portfolio-purple;
+}
+
+/* Social icons styling */
+.social-icon {
+  @apply text-portfolio-light-purple hover:text-portfolio-purple transition-colors duration-300;
+}
+
+/* Project list styling */
+.project-item {
+  @apply flex items-center gap-2 mb-2;
+}
+
+.project-item::before {
+  content: "";
+  @apply w-2 h-2 rounded-full bg-portfolio-purple flex-shrink-0;
+}
+
+/* Scroll to top button styling */
+.scroll-to-top {
+  @apply fixed bottom-6 right-6 w-12 h-12 rounded-full bg-portfolio-purple text-white 
+  flex items-center justify-center shadow-lg hover:bg-opacity-80 transition-all duration-300
+  transform hover:scale-110 z-50;
+}
+
+/* Custom gradient text */
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-portfolio-purple to-portfolio-pink;
 }
