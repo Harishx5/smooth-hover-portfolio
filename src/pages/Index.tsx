@@ -21,7 +21,7 @@ const teamMembers = [
       { name: "Invex-AI" },
       { name: "Library Management System" }
     ],
-    imageSrc: "/lovable-uploads/2e85b698-8faf-49bb-ac30-5f1848fcdffa.png"
+    imageSrc: "/lovable-uploads/3eb28a75-2ef3-4cb5-b803-789310f841d4.png"
   },
   {
     id: "member-2",
@@ -36,7 +36,7 @@ const teamMembers = [
       { name: "Library Management System" },
       { name: "Event Management System" }
     ],
-    imageSrc: "/lovable-uploads/d0cbe4ce-742e-414e-9e2c-730afc94809e.png"
+    imageSrc: "/lovable-uploads/6e3d085b-90b8-4ec8-b329-074ae08e1cf0.png"
   },
   {
     id: "member-3",
@@ -51,7 +51,7 @@ const teamMembers = [
       { name: "Event Management" },
       { name: "Netflix Clone" }
     ],
-    imageSrc: "/lovable-uploads/29117118-49b9-4cd3-b2ca-65615e94e8aa.png"
+    imageSrc: "/lovable-uploads/b8a74b31-c04e-4e4d-90a6-52fc0566eb49.png"
   },
   {
     id: "member-4",
@@ -66,7 +66,7 @@ const teamMembers = [
       { name: "Student Registration Form" },
       { name: "Library Management System" }
     ],
-    imageSrc: "/lovable-uploads/fa6bfae9-47a4-4bb0-b973-de0c0c0010ed.png"
+    imageSrc: "/lovable-uploads/ddcc4101-177d-4919-9dc6-28eefa2ba658.png"
   },
   {
     id: "member-5",
@@ -82,7 +82,7 @@ const teamMembers = [
       { name: "Responsive Landing Webpage" },
       { name: "Social Media Account Creation (MERN Stack)" }
     ],
-    imageSrc: "/lovable-uploads/a2257d9b-4e30-43d6-8736-e846928ebc96.png"
+    imageSrc: "/lovable-uploads/00772c7e-8354-4f06-8c15-5508290c1849.png"
   }
 ];
 

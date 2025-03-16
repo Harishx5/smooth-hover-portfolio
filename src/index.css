@@ -117,7 +117,7 @@ html {
 
 /* Social icons styling */
 .social-icon {
-  @apply text-portfolio-light-purple hover:text-portfolio-purple transition-colors duration-300;
+  @apply text-portfolio-light-purple hover:text-portfolio-purple transition-colors duration-300 transform hover:scale-110;
 }
 
 /* Project list styling */
@@ -140,4 +140,99 @@ html {
 /* Custom gradient text */
 .gradient-text {
   @apply text-transparent bg-clip-text bg-gradient-to-r from-portfolio-purple to-portfolio-pink;
+  background-size: 200% 100%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  0% { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.5s ease-out forwards;
+}
+
+/* Enhanced link hover effects */
+.link-hover {
+  @apply relative;
+}
+
+.link-hover::after {
+  content: '';
+  @apply absolute w-0 h-0.5 bg-portfolio-purple left-0 bottom-0 transition-all duration-300;
+}
+
+.link-hover:hover::after {
+  @apply w-full;
+}
+
+/* Image hover effects */
+.image-hover {
+  @apply overflow-hidden relative;
+}
+
+.image-hover img {
+  @apply transition-transform duration-500;
+}
+
+.image-hover:hover img {
+  @apply scale-110;
+}
+
+.image-hover .overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-portfolio-dark-blue/80 to-transparent opacity-0 transition-opacity duration-300;
+}
+
+.image-hover:hover .overlay {
+  @apply opacity-100;
+}
+
+/* Element reveal animations for scroll */
+.reveal-on-scroll {
+  @apply opacity-0 translate-y-10 transition-all duration-700;
+}
+
+.reveal-on-scroll.revealed {
+  @apply opacity-100 translate-y-0;
 }
