@@ -21,16 +21,16 @@ const HeroSection = () => {
       <div className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full bg-portfolio-pink/20 filter blur-3xl animate-pulse-slow" />
       
       <div className="relative z-10 text-center px-4 animate-fade-in-up opacity-0" style={{ animationDelay: "0.2s" }}>
-        <h1 className="text-6xl md:text-8xl font-bold mb-6 gradient-text">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text">
           Our Team Portfolio
         </h1>
-        <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto text-gray-300">
+        <p className="text-xl mb-12 max-w-2xl mx-auto text-gray-300">
           Meet Our Amazing Team Members
         </p>
         
         <button 
           onClick={scrollToFirstMember}
-          className="flex items-center justify-center mx-auto mt-12 w-12 h-12 rounded-full bg-white/10 
+          className="flex items-center justify-center mx-auto mt-16 w-12 h-12 rounded-full bg-white/10 
                    hover:bg-white/20 transition-all duration-300 animate-float"
           aria-label="Scroll down"
         >

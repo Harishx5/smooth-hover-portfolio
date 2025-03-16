@@ -53,7 +53,7 @@ const Navigation = ({ teamMembers }: NavigationProps) => {
 
   const scrollToTop = () => {
     window.scrollTo({
-      top: a|0,
+      top: 0,
       behavior: "smooth",
     });
   };
