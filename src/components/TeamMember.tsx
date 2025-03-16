@@ -1,6 +1,11 @@
 
 import { Mail, Phone, Github, Linkedin, Code } from "lucide-react";
 import { useState } from "react";
+import { 
+  HoverCard,
+  HoverCardTrigger,
+  HoverCardContent 
+} from "@/components/ui/hover-card";
 
 interface ProjectItem {
   name: string;
@@ -49,44 +54,80 @@ const TeamMember = ({
       </div>
 
       <div className="w-full md:w-2/5 lg:w-1/3 max-w-md">
-        <h2 className="text-4xl md:text-5xl mb-3 font-bold gradient-text">{name}</h2>
+        <h2 className="text-4xl md:text-5xl mb-3 font-bold gradient-text hover:scale-105 transition-transform duration-300">
+          {name}
+        </h2>
         <p className="text-lg md:text-xl mb-2 text-white">{title}</p>
         {subtitle && <p className="text-md mb-6 text-gray-300">{subtitle}</p>}
 
         <div className="space-y-3 mb-8">
           <div className="flex items-center gap-3">
             <Mail className="social-icon" size={18} />
-            <a href={`mailto:${email}`} className="text-gray-300 hover:text-white transition-colors">
-              {email}
-            </a>
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <a 
+                  href={`mailto:${email}`} 
+                  className="text-gray-300 hover:text-white transition-colors hover:underline"
+                >
+                  {email}
+                </a>
+              </HoverCardTrigger>
+              <HoverCardContent className="bg-portfolio-dark-blue border border-portfolio-purple/30 text-white">
+                Send an email to {name}
+              </HoverCardContent>
+            </HoverCard>
           </div>
           <div className="flex items-center gap-3">
             <Phone className="social-icon" size={18} />
-            <a href={`tel:${phone}`} className="text-gray-300 hover:text-white transition-colors">
-              {phone}
-            </a>
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <a 
+                  href={`tel:${phone}`} 
+                  className="text-gray-300 hover:text-white transition-colors hover:underline"
+                >
+                  {phone}
+                </a>
+              </HoverCardTrigger>
+              <HoverCardContent className="bg-portfolio-dark-blue border border-portfolio-purple/30 text-white">
+                Call {name}
+              </HoverCardContent>
+            </HoverCard>
           </div>
           <div className="flex items-center gap-3">
             <Github className="social-icon" size={18} />
-            <a
-              href={githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              {githubUrl.replace("https://", "")}
-            </a>
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <a
+                  href={`https://${githubUrl.replace(/^https?:\/\//, '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors hover:underline"
+                >
+                  {githubUrl.replace(/^https?:\/\//, '')}
+                </a>
+              </HoverCardTrigger>
+              <HoverCardContent className="bg-portfolio-dark-blue border border-portfolio-purple/30 text-white">
+                View {name}'s GitHub profile
+              </HoverCardContent>
+            </HoverCard>
           </div>
           <div className="flex items-center gap-3">
             <Linkedin className="social-icon" size={18} />
-            <a
-              href={linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              {linkedinUrl.replace("https://", "")}
-            </a>
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <a
+                  href={`https://${linkedinUrl.replace(/^https?:\/\//, '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors hover:underline"
+                >
+                  {linkedinUrl.replace(/^https?:\/\//, '')}
+                </a>
+              </HoverCardTrigger>
+              <HoverCardContent className="bg-portfolio-dark-blue border border-portfolio-purple/30 text-white">
+                Connect with {name} on LinkedIn
+              </HoverCardContent>
+            </HoverCard>
           </div>
         </div>
 
@@ -97,8 +138,10 @@ const TeamMember = ({
           </div>
           <ul className="space-y-2">
             {projects.map((project, index) => (
-              <li key={index} className="project-item">
-                {project.name}
+              <li key={index} className="project-item group">
+                <span className="group-hover:text-portfolio-purple transition-colors">
+                  {project.name}
+                </span>
               </li>
             ))}
           </ul>

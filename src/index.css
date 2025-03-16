@@ -122,12 +122,12 @@ html {
 
 /* Project list styling */
 .project-item {
-  @apply flex items-center gap-2 mb-2;
+  @apply flex items-center gap-2 mb-2 transition-all duration-300;
 }
 
 .project-item::before {
   content: "";
-  @apply w-2 h-2 rounded-full bg-portfolio-purple flex-shrink-0;
+  @apply w-2 h-2 rounded-full bg-portfolio-purple flex-shrink-0 transition-all duration-300 group-hover:w-3 group-hover:h-3;
 }
 
 /* Scroll to top button styling */
