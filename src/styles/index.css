@@ -1,6 +1,0 @@
-
-/* Main CSS entry point that imports all modular CSS files */
-@import './base.css';
-@import './animations.css';
-@import './components.css';
-@import './hover-effects.css';
