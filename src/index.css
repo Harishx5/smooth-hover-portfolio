@@ -99,28 +99,7 @@
     @apply bg-portfolio-dark-blue text-white;
     scroll-behavior: smooth;
     overflow-x: hidden;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
   }
-  
-  body::-webkit-scrollbar, 
-  div::-webkit-scrollbar {
-    display: none;
-    width: 0;
-    height: 0;
-  }
-}
-
-html {
-  scroll-behavior: smooth;
-  overflow: hidden;
-}
-
-/* Hide scrollbars for all elements */
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  display: none;
 }
 
 /* Progress indicators styling */
@@ -252,4 +231,31 @@ html {
 
 .reveal-on-scroll.revealed {
   @apply opacity-100 translate-y-0;
+}
+
+/* Custom scrollbar styling that allows scrolling but looks nice */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-portfolio-purple/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-portfolio-purple;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .h-screen {
+    height: auto;
+    min-height: 100vh;
+    padding: 4rem 0;
+  }
 }

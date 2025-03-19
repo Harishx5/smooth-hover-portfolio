@@ -87,11 +87,11 @@ const teamMembers = [
 
 const Index = () => {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative">
       <Navigation teamMembers={teamMembers} />
       <HeroSection />
       
-      <div className="overflow-hidden">
+      <div>
         {teamMembers.map((member) => (
           <TeamMember key={member.id} {...member} />
         ))}

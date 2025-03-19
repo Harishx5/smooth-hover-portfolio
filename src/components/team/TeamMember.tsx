@@ -45,7 +45,7 @@ const TeamMember = ({
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     );
 
     const element = document.getElementById(id);
@@ -63,7 +63,7 @@ const TeamMember = ({
   return (
     <section
       id={id}
-      className={`h-screen w-full py-16 flex flex-col md:flex-row items-center justify-center gap-12 px-4 md:px-10 lg:px-16 relative transition-opacity duration-1000 ${
+      className={`min-h-screen w-full py-16 md:py-24 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 px-4 md:px-10 lg:px-16 relative transition-opacity duration-1000 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >

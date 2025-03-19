@@ -38,6 +38,8 @@ const Navigation = ({ teamMembers }: NavigationProps) => {
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call once to set initial state
+    
     return () => window.removeEventListener("scroll", handleScroll);
   }, [teamMembers]);
 
