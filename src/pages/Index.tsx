@@ -92,9 +92,11 @@ const Index = () => {
       <Navigation teamMembers={teamMembers} />
       <HeroSection />
       
-      {teamMembers.map((member) => (
-        <TeamMember key={member.id} {...member} />
-      ))}
+      <div className="py-4">
+        {teamMembers.map((member) => (
+          <TeamMember key={member.id} {...member} />
+        ))}
+      </div>
     </div>
   );
 };

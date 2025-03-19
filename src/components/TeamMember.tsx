@@ -77,10 +77,11 @@ const TeamMember = ({
       }`}
     >
       <div className="absolute top-10 left-0 w-full flex justify-center md:justify-start md:left-10 lg:left-20">
-        <div className={`flex items-center gap-4 ${isVisible ? "animate-fade-in-up" : ""}`}>
-          <div className="w-14 h-14 rounded-full bg-portfolio-purple flex items-center justify-center text-2xl font-bold text-white animate-pulse-slow">
+        <div className={`flex items-center gap-2 ${isVisible ? "animate-fade-in-up" : ""}`}>
+          <div className="w-12 h-12 rounded-full bg-portfolio-purple flex items-center justify-center text-xl font-bold text-white animate-pulse-slow">
             {number}
           </div>
+          <div className="h-0.5 w-16 bg-portfolio-purple/50 hidden md:block"></div>
         </div>
       </div>
 
@@ -193,7 +194,7 @@ const TeamMember = ({
       </div>
 
       <div 
-        className={`w-full md:w-3/5 lg:w-1/2 max-w-lg relative overflow-hidden rounded-xl shadow-2xl shadow-portfolio-purple/20 transition-all duration-1000 ease-out ${
+        className={`w-full md:w-1/2 lg:w-2/5 max-w-md relative overflow-hidden rounded-xl shadow-2xl shadow-portfolio-purple/20 transition-all duration-1000 ease-out ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
         onMouseEnter={() => setIsHovered(true)}
