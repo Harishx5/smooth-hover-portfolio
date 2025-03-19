@@ -72,13 +72,13 @@ const TeamMember = ({
   return (
     <section
       id={id}
-      className={`min-h-screen w-full py-20 flex flex-col md:flex-row items-center justify-center gap-16 px-4 md:px-12 lg:px-20 relative transition-opacity duration-1000 ${
+      className={`h-screen w-full py-16 flex flex-col md:flex-row items-center justify-center gap-12 px-4 md:px-10 lg:px-16 relative transition-opacity duration-1000 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="absolute top-10 left-0 w-full flex justify-center md:justify-start md:left-10 lg:left-20">
-        <div className={`flex items-center gap-2 ${isVisible ? "animate-fade-in-up" : ""}`}>
-          <div className="w-12 h-12 rounded-full bg-portfolio-purple flex items-center justify-center text-xl font-bold text-white animate-pulse-slow">
+      <div className="absolute top-10 left-0 w-full flex justify-center md:justify-start md:left-10 lg:left-16">
+        <div className={`flex items-center gap-3 ${isVisible ? "animate-fade-in-up" : ""}`}>
+          <div className="w-10 h-10 rounded-full bg-portfolio-purple flex items-center justify-center text-lg font-bold text-white animate-pulse-slow">
             {number}
           </div>
           <div className="h-0.5 w-16 bg-portfolio-purple/50 hidden md:block"></div>
@@ -89,7 +89,7 @@ const TeamMember = ({
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <h2 className="text-4xl md:text-5xl mb-3 font-bold gradient-text hover:scale-105 transition-transform duration-300 cursor-pointer">
+              <h2 className="text-3xl md:text-4xl mb-3 font-bold gradient-text hover:scale-105 transition-transform duration-300 cursor-pointer">
                 {name}
               </h2>
             </TooltipTrigger>
@@ -194,14 +194,14 @@ const TeamMember = ({
       </div>
 
       <div 
-        className={`w-full md:w-1/2 lg:w-2/5 max-w-md relative overflow-hidden rounded-xl shadow-2xl shadow-portfolio-purple/20 transition-all duration-1000 ease-out ${
+        className={`w-full md:w-2/5 lg:w-1/3 max-w-sm relative overflow-hidden rounded-xl shadow-2xl shadow-portfolio-purple/20 transition-all duration-1000 ease-out ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         <div
-          className={`w-full aspect-[4/5] rounded-xl overflow-hidden transition-transform duration-500 ease-out transform ${
+          className={`w-full aspect-[3/4] rounded-xl overflow-hidden transition-transform duration-500 ease-out transform ${
             isHovered ? "scale-105" : "scale-100"
           }`}
         >
