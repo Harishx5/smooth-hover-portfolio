@@ -1,7 +1,6 @@
-
 import HeroSection from "@/components/HeroSection";
 import Navigation from "@/components/Navigation";
-import TeamMember from "@/components/TeamMember";
+import TeamMember from "@/components/team/TeamMember";
 
 const teamMembers = [
   {
