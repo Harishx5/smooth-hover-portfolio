@@ -17,12 +17,11 @@ const MemberProjects = ({ projects, isVisible }: MemberProjectsProps) => {
         <Code size={20} className="text-portfolio-purple animate-pulse-slow" />
         <h3 className="text-xl font-semibold">Projects</h3>
       </div>
-      <ul className="space-y-2">
+      <ul className={`space-y-2 wave-container ${isVisible ? "revealed" : ""}`}>
         {projects.map((project, index) => (
           <li 
             key={index} 
-            className="project-item group hover:translate-x-2 transition-all duration-300"
-            style={{ transitionDelay: `${index * 100}ms` }}
+            className="project-item group hover:translate-x-2 transition-all duration-300 wave-item"
           >
             <span className="group-hover:text-portfolio-purple transition-colors">
               {project.name}

@@ -13,8 +13,8 @@ const MemberImage = ({ name, title, imageSrc, isVisible }: MemberImageProps) => 
 
   return (
     <div 
-      className={`w-full md:w-2/5 lg:w-1/3 max-w-sm relative overflow-hidden rounded-xl shadow-2xl shadow-portfolio-purple/20 transition-all duration-1000 ease-out ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      className={`w-full md:w-2/5 lg:w-1/3 max-w-sm relative overflow-hidden rounded-xl shadow-2xl shadow-portfolio-purple/20 reveal-on-scroll flip ${
+        isVisible ? "revealed" : ""
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
