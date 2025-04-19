@@ -80,7 +80,7 @@ const TeamMember = ({
         isVisible={isVisible}
       />
 
-      <div className="w-full md:w-2/5 lg:w-1/3 max-w-md flex flex-col">
+      <div className={`w-full md:w-2/5 lg:w-1/3 max-w-md ${isVisible ? "animate-fade-in-right" : ""}`}>
         <MemberProjects projects={projects} isVisible={isVisible} />
       </div>
 
