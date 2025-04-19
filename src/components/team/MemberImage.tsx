@@ -41,7 +41,7 @@ const MemberImage = ({ name, title, imageSrc, isVisible }: MemberImageProps) => 
           isHovered ? "translate-y-0" : "translate-y-full"
         }`}
       >
-        <h3 className="text-white text-xl font-bold mb-2 typing-animation">{name}</h3>
+        <h3 className="text-white text-xl font-bold mb-2 typing-animation typing-complete">{name}</h3>
         <p className="text-white/80">{title}</p>
       </div>
     </div>
