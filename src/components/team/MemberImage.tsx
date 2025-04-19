@@ -13,8 +13,8 @@ const MemberImage = ({ name, title, imageSrc, isVisible }: MemberImageProps) => 
 
   return (
     <div 
-      className={`w-full md:w-2/5 lg:w-1/3 max-w-sm relative overflow-hidden rounded-xl shadow-2xl shadow-portfolio-purple/20 reveal-on-scroll flip ${
-        isVisible ? "revealed" : ""
+      className={`w-full md:w-2/5 lg:w-1/3 max-w-sm relative overflow-hidden rounded-xl shadow-2xl shadow-portfolio-purple/20 tilt-card ${
+        isVisible ? "reveal-on-scroll flip revealed" : "reveal-on-scroll flip"
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -22,7 +22,7 @@ const MemberImage = ({ name, title, imageSrc, isVisible }: MemberImageProps) => 
       <div
         className={`w-full aspect-[3/4] rounded-xl overflow-hidden transition-transform duration-500 ease-out transform ${
           isHovered ? "scale-105" : "scale-100"
-        }`}
+        } card-content`}
       >
         <img
           src={imageSrc}
@@ -41,7 +41,7 @@ const MemberImage = ({ name, title, imageSrc, isVisible }: MemberImageProps) => 
           isHovered ? "translate-y-0" : "translate-y-full"
         }`}
       >
-        <h3 className="text-white text-xl font-bold mb-2">{name}</h3>
+        <h3 className="text-white text-xl font-bold mb-2 typing-animation">{name}</h3>
         <p className="text-white/80">{title}</p>
       </div>
     </div>
