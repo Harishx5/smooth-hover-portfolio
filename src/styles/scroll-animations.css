@@ -1,0 +1,41 @@
+
+.reveal-on-scroll {
+  opacity: 0;
+  transition: all 0.7s ease-out;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+}
+
+.reveal-on-scroll.from-bottom {
+  transform: translateY(50px);
+}
+
+.reveal-on-scroll.from-bottom.revealed {
+  transform: translateY(0);
+}
+
+.reveal-on-scroll.from-left {
+  transform: translateX(-50px);
+}
+
+.reveal-on-scroll.from-left.revealed {
+  transform: translateX(0);
+}
+
+.reveal-on-scroll.from-right {
+  transform: translateX(50px);
+}
+
+.reveal-on-scroll.from-right.revealed {
+  transform: translateX(0);
+}
+
+.reveal-on-scroll.scale {
+  transform: scale(0.9);
+}
+
+.reveal-on-scroll.scale.revealed {
+  transform: scale(1);
+}

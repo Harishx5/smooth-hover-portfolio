@@ -1,0 +1,100 @@
+
+/* Progress indicators styling */
+.progress-indicator {
+  @apply w-2 h-2 rounded-full bg-gray-400 transition-all duration-300;
+}
+
+.progress-indicator.active {
+  @apply w-3 h-3 bg-portfolio-purple;
+}
+
+/* Social icons styling */
+.social-icon {
+  @apply text-portfolio-light-purple hover:text-portfolio-purple transition-colors duration-300 transform hover:scale-110;
+}
+
+/* Project list styling */
+.project-item {
+  @apply flex items-center gap-2 mb-2 transition-all duration-300;
+}
+
+.project-item::before {
+  content: "";
+  @apply w-2 h-2 rounded-full bg-portfolio-purple flex-shrink-0 transition-all duration-300 group-hover:w-3 group-hover:h-3;
+}
+
+/* Scroll to top button styling */
+.scroll-to-top {
+  @apply fixed bottom-6 right-6 w-12 h-12 rounded-full bg-portfolio-purple text-white 
+  flex items-center justify-center shadow-lg hover:bg-opacity-80 transition-all duration-300
+  transform hover:scale-110 z-50;
+}
+
+/* Custom gradient text */
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-portfolio-purple to-portfolio-pink;
+  background-size: 200% 100%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Enhanced link hover effects */
+.link-hover {
+  @apply relative;
+}
+
+.link-hover::after {
+  content: '';
+  @apply absolute w-0 h-0.5 bg-portfolio-purple left-0 bottom-0 transition-all duration-300;
+}
+
+.link-hover:hover::after {
+  @apply w-full;
+}
+
+/* Image hover effects */
+.image-hover {
+  @apply overflow-hidden relative;
+}
+
+.image-hover img {
+  @apply transition-transform duration-500;
+}
+
+.image-hover:hover img {
+  @apply scale-110;
+}
+
+.image-hover .overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-portfolio-dark-blue/80 to-transparent opacity-0 transition-opacity duration-300;
+}
+
+.image-hover:hover .overlay {
+  @apply opacity-100;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-portfolio-purple/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-portfolio-purple;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .h-screen {
+    height: auto;
+    min-height: 100vh;
+    padding: 4rem 0;
+  }
+}
