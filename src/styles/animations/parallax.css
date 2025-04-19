@@ -1,0 +1,27 @@
+
+/* Parallax scroll effect */
+.parallax-scroll {
+  transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+  will-change: transform;
+}
+
+.parallax-slow { transform: translateY(calc(var(--scroll) * -0.1px)); }
+.parallax-medium { transform: translateY(calc(var(--scroll) * -0.2px)); }
+.parallax-fast { transform: translateY(calc(var(--scroll) * -0.3px)); }
+
+/* 3D card tilt effect */
+.tilt-card {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  transition: transform 0.3s ease;
+}
+
+.tilt-card .card-content {
+  transform-style: preserve-3d;
+  transform: translateZ(50px);
+}
+
+/* Reset on leave option */
+.reset-on-leave {
+  transition: all 0.5s ease-out;
+}
