@@ -18,7 +18,9 @@ const teamMembers = [
       { name: "Hella The Chatbot" },
       { name: "Skill Swap" },
       { name: "Invex-AI" },
-      { name: "Library Management System" }
+      { name: "Library Management System" },
+      { name: "Fake News Detection System" },
+      { name: "E-commerce Platform" }
     ],
     imageSrc: "/lovable-uploads/3eb28a75-2ef3-4cb5-b803-789310f841d4.png"
   },

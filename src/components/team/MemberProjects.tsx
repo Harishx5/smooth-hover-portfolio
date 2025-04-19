@@ -19,13 +19,13 @@ const MemberProjects = ({ projects, isVisible }: MemberProjectsProps) => {
           <span className="inner">Projects</span>
         </h3>
       </div>
-      <ul className={`space-y-2 fade-stagger ${isVisible ? "revealed" : ""}`}>
+      <ul className={`space-y-2 wave-container ${isVisible ? "revealed" : ""}`}>
         {projects.map((project, index) => (
           <li 
             key={index} 
-            className="project-item group hover:translate-x-2 transition-all duration-300"
+            className="project-item wave-item group hover:translate-x-2 transition-all duration-300 hover:scale-105"
           >
-            <span className="group-hover:text-portfolio-purple transition-colors">
+            <span className="group-hover:text-portfolio-purple transition-colors inline-block after:content-[''] after:block after:w-0 after:h-0.5 after:bg-portfolio-purple after:transition-all after:duration-300 group-hover:after:w-full">
               {project.name}
             </span>
           </li>

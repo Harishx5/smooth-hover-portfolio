@@ -68,16 +68,18 @@ export const initScrollAnimations = () => {
   magneticElements.forEach(el => {
     const strength = 30;
     
-    el.addEventListener('mousemove', (e) => {
-      const rect = el.getBoundingClientRect();
+    el.addEventListener('mousemove', (e: MouseEvent) => {
+      const element = el as HTMLElement;
+      const rect = element.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
       
-      el.style.transform = `translate(${x / strength}px, ${y / strength}px)`;
+      element.style.transform = `translate(${x / strength}px, ${y / strength}px)`;
     });
     
     el.addEventListener('mouseleave', () => {
-      el.style.transform = 'translate(0px, 0px)';
+      const element = el as HTMLElement;
+      element.style.transform = 'translate(0px, 0px)';
     });
   });
 
