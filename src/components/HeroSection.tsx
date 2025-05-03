@@ -33,16 +33,15 @@ const HeroSection = () => {
       <div className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full bg-portfolio-pink/20 filter blur-3xl animate-pulse-slow parallax-scroll parallax-medium" />
       
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-portfolio-purple to-portfolio-pink text-transparent bg-clip-text reveal-text" 
-            data-revealer-color="#8b5cf6">
-          <span className="inner">Our Team Portfolio</span>
+        {/* Main Title */}
+        <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-portfolio-purple to-portfolio-pink text-transparent bg-clip-text">
+          Our Team Portfolio
         </h1>
         
-        <div className="split-text reveal-on-scroll mb-8 md:mb-12 mx-auto">
-          <p className="text-lg sm:text-xl text-gray-300">
-            Meet Our Amazing Team Members
-          </p>
-        </div>
+        {/* Subtitle */}
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8">
+          Meet Our Amazing Team Members
+        </p>
         
         <button 
           onClick={scrollToFirstMember}
