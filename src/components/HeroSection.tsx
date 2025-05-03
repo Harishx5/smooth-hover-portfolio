@@ -33,19 +33,19 @@ const HeroSection = () => {
       <div className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full bg-portfolio-pink/20 filter blur-3xl animate-pulse-slow parallax-scroll parallax-medium" />
       
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        {/* Main Title */}
-        <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-portfolio-purple to-portfolio-pink text-transparent bg-clip-text">
+        {/* Main Title - larger size to match reference image */}
+        <h1 className="text-7xl sm:text-8xl md:text-9xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">
           Our Team Portfolio
         </h1>
         
-        {/* Subtitle */}
-        <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8">
+        {/* Subtitle - adjusted to match reference image */}
+        <p className="text-xl sm:text-2xl md:text-3xl text-gray-300">
           Meet Our Amazing Team Members
         </p>
         
         <button 
           onClick={scrollToFirstMember}
-          className="flex items-center justify-center mx-auto mt-8 md:mt-16 w-12 h-12 rounded-full bg-white/10 
+          className="flex items-center justify-center mx-auto mt-16 w-14 h-14 rounded-full bg-white/10 
                    hover:bg-white/20 transition-all duration-300 animate-float reveal-on-scroll scale stagger-3 magnetic"
           aria-label="Scroll down"
         >
