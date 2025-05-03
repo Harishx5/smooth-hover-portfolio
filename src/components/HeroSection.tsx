@@ -33,7 +33,7 @@ const HeroSection = () => {
       <div className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full bg-portfolio-pink/20 filter blur-3xl animate-pulse-slow parallax-scroll parallax-medium" />
       
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 gradient-text reveal-text" 
+        <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-portfolio-purple to-portfolio-pink text-transparent bg-clip-text reveal-text" 
             data-revealer-color="#8b5cf6">
           <span className="inner">Our Team Portfolio</span>
         </h1>
